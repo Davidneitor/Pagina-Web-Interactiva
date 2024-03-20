@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DavidPelis</title>
+    <link rel="stylesheet" type="text/css" href="CSS/css.css"> 
+    <script src="JavaScript/scipts.js" defer></script>
+</head>
+<body>
+  <div class="fondoheader">
+      <header>
+          <nav>
+              <img src="https://cdn-icons-png.freepik.com/512/11169/11169660.png" alt="Logo">
+  
+              <h1>DavidPelis</h1>
+  
+              <a class="enlace" href="Inicio.html">Inicio</a>
+              <a class="enlace" href="Películas.html">Películas</a>
+              <a class="enlace" href="Actores.html"><u>Actores</u></a>
+  
+              <div class="container">
+                  <button id="botonConfiguracion">
+                  <!-- Input checkbox oculto -->
+                  <input type="checkbox" id="checkbox" class="checkbox-input">
+          
+                  <!-- Label que simula el botón -->
+                  <label for="checkbox" class="boton">
+                      <!-- Imagen dentro del botón -->
+                          <img src="https://cdn-icons-png.freepik.com/256/165/165605.png" alt="Ajustes" onclick="toggleForm()">
+                  </label>
+              </button>
+              </div>
+          </nav>
+      </header>
+  </div>
+  <div id="panelConfiguracion" style="display: none;" >
+      <form id="formularioConfiguracion">
+          <h3>Configuración</h3>
+          <label for="fondo">Color de fondo:</label>
+          <select id="fondo">
+              <option value="oscuro">Oscuro</option>
+              <option value="claro">Claro</option>
+          </select>
+          <label for="fuente">Fuente:</label>
+          <select id="fuente">
+              <option value="serif">Serif</option>
+              <option value="Arial">Arial</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Comic Sans MS">Comic Sans</option>
+          </select>
+      </form>
+  </div>
+  <main>
+    <h2>Aquí puedes consultar información sobre los actores del momento</h2>
+    <p>¡Prueba a pasar el cursor por encima de la imagen!</p>
+    <div class="infoactores">
+        <img src="Multimedia/Imagenes/Actores/RyanGosling.png" alt="Imagen 1" class="imagen" data-info="Edad: 43 años - Residencia: California - Nacionalidad: Canadiense">
+        <table class="hidden">
+          <thead>
+            <tr>
+              <th>Ryan Gosling</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se añadirán las filas de información dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+      <div class="infoactores">
+        <img src="Multimedia/Imagenes/Actores/ScarlettJohansson.png" alt="Imagen 2" class="imagen" data-info="Edad: 39 años  - Residencia: Nueva York - Nacionalidad: Danesa">
+        <table class="hidden">
+          <thead>
+            <tr>
+              <th>Scarlett Johansson</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se añadirán las filas de información dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+      <script src="JavaScript/actores.js"></script>
+    </main>
+       <!-- Pie de página -->
+    <footer>
+      <h4>
+          <br>
+          David Alonso Tur<br>
+          dalonsotur@cifpfbmoll.eu<br>
+           Desenvolupament d'aplicacions multiplataforma
+      </h4>
+      <br>
+  </footer>
+</body>
+</html>

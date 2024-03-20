@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DavidPelis</title>
+    <link rel="stylesheet" type="text/css" href="CSS/css.css"> 
+    <script src="JavaScript/scipts.js" defer></script>
+</head>
+<body>
+    <div class="fondoheader">
+        <header>
+            <nav>
+                <img src="https://cdn-icons-png.freepik.com/512/11169/11169660.png" alt="Logo">
+    
+                <h1>DavidPelis</h1>
+    
+                <a class="enlace" href="Inicio.html"><u>Inicio</u></a>
+                <a class="enlace" href="Películas.html">Películas</a>
+                <a class="enlace" href="Actores.html">Actores</a>
+    
+                <div class="container">
+                    <button id="botonConfiguracion">
+                    <input type="checkbox" id="checkbox" class="checkbox-input">
+                    <label for="checkbox" class="boton">
+                            <img src="https://cdn-icons-png.freepik.com/256/165/165605.png" alt="Ajustes" onclick="toggleForm()">
+                    </label>
+                </button>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div id="panelConfiguracion" style="display: none;" >
+        <form id="formularioConfiguracion">
+            <h3>Configuración</h3>
+            <label for="fondo">Color de fondo:</label>
+            <select id="fondo">
+                <option value="oscuro">Oscuro</option>
+                <option value="claro">Claro</option>
+            </select>
+            <label for="fuente">Fuente:</label>
+            <select id="fuente">
+                <option value="serif">Serif</option>
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Comic Sans MS">Comic Sans</option>
+            </select>
+        </form>
+    </div>
+    
+  
+    <div id="anunciopop" class="anunciopop">
+        <span id="closeBtn" class="close-btn">X</span>
+        <img id="popupImg" src="https://i.imgur.com/PVNnMn0.gif" alt="Anuncio Borja Moll">
+    </div>
+    
+    <div class="preguntarnombre">
+        <form id="miFormulario" action="javascript:void(0);">
+            <label for="nombre"><h1>¿Cómo te llamas?</h1></label>
+            <input type="text" id="nombre" required><br>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+    <h1 id="mensajeBienvenida" style="display: none;"></h1>
+    <main>
+        <h2>Sobre esta página</h2>
+    <p>DavidCine es una página originalmente creada para sacar buena nota en la asignatura de lenguaje de marcas, ya que en verdad se esfuerza mucho y realmente se merece aprobar con algo más de un cinco, pero aparte de eso és una página de cine, con información meticulosamente seleccionada para poder disfrutar de una gran experiencia en la que podrás mantenerte informado sobre las mejores películas y los mejores actores del momento.</p>
+    <br>
+    <p>¡Ahora mejorada con scripts que te permitirán adentrarte de una manera mucho más dinámica en el mundo del cine, con opciones de personalización y un montón de infromacióm oculta que te puede interesar!</p>
+    <h2>Tenemos tráiler que te pueden interesar</h2>
+    <div class="container">
+        <div class="video-container">
+          <video width="320" height="240" controls>
+            <source src="Multimedia/Videos/Trailer1.mp4" type="video/mp4" alt="Trailer1">
+          </video>
+        </div>
+        <div class="text-container">
+          <h2>El Especialista (2024)</h2>
+          <p>The Fall Guy es una próxima película estadounidense de suspenso y acción dirigida por David Leitch, escrita por Drew Pearce y protagonizada por Ryan Gosling y Emily Blunt.</p>
+        </div>
+        <div class="video-container">
+            <video width="320" height="240" controls>
+              <source src="Multimedia/Videos/Trailer2.mp4" type="video/mp4" alt="Trailer2">
+            </video>
+          </div>
+          <div class="text-container">
+            <h2>Garfield (2024)</h2>
+            <p>El mundialmente famoso Garfield, el gato casero que odia los lunes y que adora la lasaña, está a punto de vivir una aventura ¡en el salvaje mundo exterior! </p>
+          </div>
+      </div>
+    <h2>¡Dale ritmo a tu vida con la música de tus películas favoritas!</h2>
+    <div class="audio-player"> 
+            <audio id="audio-player" controls>
+            <source src="" type="audio/mpeg" id="audio-source">
+            Tu navegador no soporta la etiqueta de audio.
+        </audio><br>
+        <button id="aleatorizar-btn">Aleatorizar</button>
+    </div>
+    <h2>Contacta con nosotros</h2>
+        <form id="FormularioDeContacto" onsubmit="return validateForm()">
+        <div>
+            <label for="nombre2">Nombre:</label><br>
+            <input type="text" id="nombre2" name="nombre2" required>
+        </div>
+        <div>
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+        <div>
+            <label for="sexo">Sexo:</label><br>
+            <select id="sexo" name="sexo" required>
+            <option value="">Seleccionar</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="tractor">Tractor</option>
+            </select>
+        </div>
+        <div>
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad" required>
+        </div>
+        <div>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <h4>
+            <br>
+            David Alonso Tur<br>
+            dalonsotur@cifpfbmoll.eu<br>
+             Desenvolupament d'aplicacions multiplataforma
+        </h4>
+        <br>
+    </footer>
+</body>
+</html>

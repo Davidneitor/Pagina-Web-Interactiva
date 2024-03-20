@@ -1,0 +1,391 @@
+/* Estilos generales para el cuerpo del documento */
+body {
+    margin: 0;
+    font-family: serif, Verdana;
+    color:gainsboro;
+    background-color: #232323;
+    text-align: center;
+}
+
+h1{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+}
+
+main p{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+}
+
+
+.fondoheader {
+    background-color: rgb(18,18,18);     /* Color de fondo del header */
+}
+
+/* Estilos para el encabezado (header) */
+header {
+    background-size: cover; /* Ajusta el tamaño de fondo para cubrir todo el elemento */
+    color: #fff; /* Color del texto */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    font-size: 36px; /* Tamaño de fuente */
+    margin: 0; /* Elimina el margen predeterminado del encabezado */
+    font-family: Tahoma, Verdana; /* Tipo de fuente */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Estilos para la imagen dentro del encabezado */
+header img {
+    width: 70px; /* Ancho de la imagen */
+    height: 70px; /* Altura de la imagen */
+}
+
+/* Estilos para el título dentro del encabezado */
+header h1 {
+    margin: 10px; /* Margen alrededor del título */
+    color: #56b9de;
+}
+
+/* Estilos para la barra de navegación (nav) */
+nav {
+    display: flex; /* Usa el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos verticalmente en el eje transversal */
+}
+
+/* Estilos para los enlaces dentro del encabezado */
+header a {
+    color: #fff; /* Color del texto */
+    margin: 10px; /* Margen alrededor de los enlaces */
+    text-decoration: none; /* Elimina la decoración de los enlaces */
+    transition: color 0.3s; /* Efecto de transición para el color del texto */
+}
+
+/* Estilos para los enlaces al pasar el mouse sobre ellos */
+header a:hover {
+    color: rgb(120, 120, 120); /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para el contenedor de búsqueda */
+.container {
+    display: flex; /* Usa el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos verticalmente en el eje transversal */
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+
+/* Estilos para el botón de ajustes */
+button {
+    transition: transform 0.3s; /* Efecto de transición para la escala del botón */
+    background-color: rgb(18, 18, 18);
+    border: none;
+    color: white;
+}
+
+/* Estilos para el botón al pasar el mouse sobre él */
+button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor al puntero */
+}
+
+.checkbox-input {
+    display: none;
+}
+
+/* Transición para la animación de giro */
+.boton img {
+    transition: transform 0.5s ease;
+    filter: invert(100%);
+}
+
+/* Cuando el input checkbox está marcado, rotar la imagen 90 grados */
+.checkbox-input:checked + .boton img {
+    transform: rotate(90deg);
+}
+
+/* Estilos para tamaños de pantalla más pequeños (móviles) */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input {
+        width: 100%; /* Ancho completo para pantallas más pequeñas */
+        margin-bottom: 10px; /* Margen inferior */
+    }
+}
+
+
+#panelConfiguracion {
+    position: fixed;
+    margin-right: 10%;
+    margin-left: 78%;
+    background-color: rgb(18,18,18); 
+    padding: 20px;
+    color: #fff;
+    display: none;
+    margin-bottom: 0;
+}
+
+#panelConfiguracion h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#panelConfiguracion label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Estilos para el tema claro */
+body.theme-claro {
+    background-color: gainsboro;
+    color: #232323;
+}
+
+/* Estilos para el formulario en el tema oscuro */
+body.theme-oscuro  {
+    background-color: #232323;
+    color: gainsboro;
+}
+
+.anunciopop {
+    display: none; /* Ocultar inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    width: 80%; /* Ancho del 80% de la pantalla */
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-family: Arial;
+    Color: red;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#popupImg {
+    display: block;
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 100%; /* Ocupar el 100% del contenedor */
+    height: auto;
+}
+
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(18, 18, 18);
+    margin-top: 50px;
+    color:white;
+    bottom: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+  
+
+  
+  .hidden {
+    display: none;
+  }
+
+.error {
+    color: red;
+}
+
+#FormularioDeContacto {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+form {
+    width: 100%;
+  }
+
+  form div {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: inline-block;
+    width: 100%;
+  }
+
+#FormularioDeContacto
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 70%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  textarea {
+    height: 100%;
+  }
+
+
+  .infoactores {
+    margin: 5% 10% 0; /* Margen del 10% en la parte superior y 0 en los lados */
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10%;
+}
+
+.infoactores .imagen {
+    width: 100%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+    transition: filter 0.3s ease; /* Transición suave al pasar el cursor */
+    height: 300px;
+    width: 200px;
+    border: 2px solid white; /* Grosor y color del borde */
+    border-radius: 10px; /* Radio de los bordes redondeados */
+    overflow: hidden; /* Para que los bordes redondeados funcionen */
+}
+
+.infoactores .imagen:hover {
+    filter: brightness(1.2); /* Cambia el brillo de la imagen al pasar el cursor */
+}
+
+table {
+    position: absolute; /* Posiciona la tabla de manera absoluta */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    top: 100%; /* Coloca la tabla debajo de la imagen */
+    left: 0; /* Alinea la tabla a la izquierda del contenedor */
+    background-color: rgba(18, 18, 18, 0.8); /* Color de fondo de la tabla */
+    border-radius: 5px; /* Borde redondeado */
+    border: 1px solid #ccc; /* Borde de la tabla */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    display: none; /* Oculta la tabla por defecto */
+    color: white;
+    text-align: left;
+}
+
+.infoactores:hover table {
+    display: block; /* Muestra la tabla al pasar el cursor sobre el contenedor de la imagen */
+}
+
+table th, table td {
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+table .hidden {
+    display: none; /* Oculta la tabla por defecto */
+}
+
+.carrusel {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden; 
+    margin-top: 5%;
+  }
+
+.carrusel img {
+    width: 259px;
+    height: 384;
+    align-items: center;
+}
+  
+  .anterior, .siguiente {
+    position: absolute;
+    top: 50%;
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+  }
+  
+  .anterior {
+    left: 0;
+  }
+  
+  .siguiente {
+    right: 0;
+  } 
+  
+
+
+  .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+
+  .rating > input {
+    display: none;
+  }
+
+  .rating > label {
+    cursor: pointer;
+    color: #707070;
+    font-size: 30px;
+    margin: 0 5px; /* ajusta el margen entre las estrellas */
+  }
+
+  .rating > label:before {
+    content: '\2606'; /* estrella vacía */
+  }
+
+  .rating > input:checked ~ label:before {
+    content: '\2605'; /* estrella llena */
+    color: #00ffff; /* color de estrella llena */
+  }
+
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before {
+    content: '\2605'; /* estrella llena en hover */
+    color: #00ffff; /* color de estrella llena en hover */
+  }

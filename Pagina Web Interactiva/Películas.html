@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DavidPelis</title>
+    <link rel="stylesheet" type="text/css" href="CSS/css.css"> 
+    <script src="JavaScript/scipts.js" defer></script>
+</head>
+<body>
+  <div class="fondoheader">
+      <header>
+          <nav>
+              <img src="https://cdn-icons-png.freepik.com/512/11169/11169660.png" alt="Logo">
+  
+              <h1>DavidPelis</h1>
+  
+              <a class="enlace" href="Inicio.html">Inicio</a>
+              <a class="enlace" href="Películas.html"><u>Películas</u></a>
+              <a class="enlace" href="Actores.html">Actores</a>
+  
+              <div class="container">
+                  <button id="botonConfiguracion">
+                  <input type="checkbox" id="checkbox" class="checkbox-input">
+
+                  <label for="checkbox" class="boton">
+                          <img src="https://cdn-icons-png.freepik.com/256/165/165605.png" alt="Ajustes" onclick="toggleForm()">
+                  </label>
+              </button>
+              </div>
+          </nav>
+      </header>
+  </div>
+  <div id="panelConfiguracion" style="display: none;" >
+      <form id="formularioConfiguracion">
+          <h3>Configuración</h3>
+          <label for="fondo">Color de fondo:</label>
+          <select id="fondo">
+              <option value="oscuro">Oscuro</option>
+              <option value="claro">Claro</option>
+          </select>
+          <label for="fuente">Fuente:</label>
+          <select id="fuente">
+              <option value="serif">Serif</option>
+              <option value="Arial">Arial</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Comic Sans MS">Comic Sans</option>
+          </select>
+      </form>
+  </div>
+  <main>
+    <h2>Valora tus películas favoritas</h2>
+<div class="carrusel">
+  <div class="contenedor-imagenes">
+    <div class="imagen">
+      <img src="Multimedia/Imagenes/Peliculas/Babe_el_cerdito_valiente.jpg" alt="Imagen 1">
+      <h3>Babe El Cerdito Valiente</h3>
+      <form id="starForm">
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 estrellas"></label>
+          <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrellas"></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrellas"></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrellas"></label>
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 estrella"></label>
+        </div>
+      </form>
+    </div>
+    <div class="imagen">
+      <img src="Multimedia/Imagenes/Peliculas/Pobres_criaturas.jpg" alt="Imagen 2">
+      <h3>Pobres Criaturas</h3>
+      <form id="starForm2">
+        <div class="rating">
+          <input type="radio" id="star5_2" name="rating_2" value="5" /><label for="star5_2" title="5 estrellas"></label>
+          <input type="radio" id="star4_2" name="rating_2" value="4" /><label for="star4_2" title="4 estrellas"></label>
+          <input type="radio" id="star3_2" name="rating_2" value="3" /><label for="star3_2" title="3 estrellas"></label>
+          <input type="radio" id="star2_2" name="rating_2" value="2" /><label for="star2_2" title="2 estrellas"></label>
+          <input type="radio" id="star1_2" name="rating_2" value="1" /><label for="star1_2" title="1 estrella"></label>
+        </div>
+      </form>
+    </div>
+    <div class="imagen">
+      <img src="Multimedia/Imagenes/Peliculas/El_club_de_la_lucha.jpg" alt="Imagen 3">
+      <h3>El Club De La Lucha</h3>
+      <form id="starForm3">
+        <div class="rating">
+          <input type="radio" id="star5_3" name="rating_3" value="5" /><label for="star5_3" title="5 estrellas"></label>
+          <input type="radio" id="star4_3" name="rating_3" value="4" /><label for="star4_3" title="4 estrellas"></label>
+          <input type="radio" id="star3_3" name="rating_3" value="3" /><label for="star3_3" title="3 estrellas"></label>
+          <input type="radio" id="star2_3" name="rating_3" value="2" /><label for="star2_3" title="2 estrellas"></label>
+          <input type="radio" id="star1_3" name="rating_3" value="1" /><label for="star1_3" title="1 estrella"></label>
+        </div>
+      </form>
+    </div>
+  </div> 
+  <button class="anterior" onclick="cambiarImagen(-1)">&#10094;</button>
+      <button class="siguiente" onclick="cambiarImagen(1)">&#10095;</button>
+    </div>
+    <script src="JavaScript/peliculas.js"></script>
+  </main>
+     <footer>
+      <h4>
+          <br>
+          David Alonso Tur<br>
+          dalonsotur@cifpfbmoll.eu<br>
+           Desenvolupament d'aplicacions multiplataforma
+      </h4>
+      <br>
+  </footer>
+</body>
+</html>
